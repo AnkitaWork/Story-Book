@@ -1,0 +1,12 @@
+.cntrl_grp {
+    position: relative;
+    .cntrl_icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        color: #1A3A6D;
+    }
+}

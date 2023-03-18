@@ -1,0 +1,25 @@
+<div class="row" *ngIf="search_type == 'typeahead'">
+<div class="col-xs-12 col-12 col-md-4 form-group">
+<input [(ngModel)]="selected"
+       [typeahead]="states"
+       class="form-control" placeholder="search select">
+ </div>
+ </div>    
+ <div class="row"  *ngIf="search_type == 'inputsearch'">
+   <div class="col-xs-12 col-12 col-md-4 form-group">  
+     <div class="cntrl_grp">
+      <input   class="form-control" placeholder="search" (keyup)="keyUp($event.target.value)">
+      <span class=" cntrl_icon"><i class="fa fa-search "></i></span>
+  </div>
+  </div>
+  </div>
+  <div class="row ml-3"  *ngIf="search_type == 'inputsearch'">
+      <pre class="card card-block card-header mb-3">
+        Search text: {{searchText}}
+      </pre>
+    </div>
+    <div class="row ml-3"  *ngIf="search_type == 'inputsearch'">
+      <pre class="card card-block card-header mb-3">
+        Search Result: <span *ngFor="let filter of filtered_array">{{filter?.name}}</span> 
+      </pre>
+    </div>

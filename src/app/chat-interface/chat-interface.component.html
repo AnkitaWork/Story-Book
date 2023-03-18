@@ -1,0 +1,6 @@
+<ng-chat [adapter]="adapter"
+[userId]="userId"
+[historyEnabled]="historyEnabled"
+[historyPageSize]="historyPageSize"
+[hideFriendsList]="hideFriendsList"
+(onMessagesSeen)="messageSeen($event)"></ng-chat>

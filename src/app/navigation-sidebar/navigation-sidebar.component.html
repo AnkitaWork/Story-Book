@@ -1,0 +1,25 @@
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container >
+ 
+    <!-- A sidebar -->
+    <ng-sidebar 
+      [(opened)]="opened" 
+      [closeOnClickOutside]="closeOnClickOutside"
+      [mode]="mode"
+      [position]="position" >
+      <div [innerHtml]="content"></div>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+      <nav class="navbar navbar-light bg-light"> 
+        <button  type="button" class="navbar-toggler" (click)="toggleSidebar()">
+          <span class="navbar-toggler-icon navbar-button"></span>
+        </button>
+      </nav>
+    </div>
+  </ng-sidebar-container>
+
+  
+
+ 

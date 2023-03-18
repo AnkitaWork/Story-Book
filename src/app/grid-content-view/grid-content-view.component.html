@@ -1,0 +1,18 @@
+<div class="container" *ngIf="!imageView">
+    <div class="row row-cols-{{noOfRows}}" >
+      <div class="col col-text" 
+        *ngFor="let title of titles"
+        [style.height.px]="height">
+        {{title}}
+      </div>
+    </div>
+</div>
+<div class="container" *ngIf="imageView">
+    <div class="row row-cols-{{noOfRows}}" *ngIf="imageView">
+        <div  class="col col-image"
+          *ngFor="let image of images"
+          >
+          <img  class="img" src={{image}} >
+        </div>
+      </div>
+  </div>

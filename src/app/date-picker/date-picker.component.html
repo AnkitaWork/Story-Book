@@ -1,0 +1,22 @@
+<div class="row">
+    <div *ngIf="pickertype =='simple'" class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Datepicker"
+             class="form-control"
+             [minDate]="minDate"
+             [maxDate]="maxDate"
+             [isDisabled]="isDisabled"
+             [bsConfig]="{dateInputFormat: dateInputFormat,showWeekNumbers:showWeekNumbers,containerClass:colorTheme}"
+             bsDatepicker>
+    </div>
+    <div *ngIf="pickertype == 'range'"  class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Daterangepicker"
+             class="form-control"
+             [minDate]="minDate"
+             [maxDate]="maxDate"
+             [isDisabled]="isDisabled"
+             [bsConfig]="{dateInputFormat: dateInputFormat,showWeekNumbers:showWeekNumbers,containerClass:colorTheme}"
+             bsDaterangepicker>
+    </div>
+  </div>

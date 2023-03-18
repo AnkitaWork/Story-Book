@@ -1,0 +1,12 @@
+<p *ngIf="!input" >{{value | currency: currency }}</p>
+<input *ngIf="input"
+    currencyMask
+    class="form-control" 
+    [options] = "{ prefix: currency + ' ',
+                 decimal: '.', 
+                 align: align,
+                 precision: precision,
+                 min: minimum,
+                 max: maximum }"
+>     
+    

@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-4" >
+        <select class="custom-select"  
+                [disabled]="disabled"
+                #value
+                (change)="onChange.emit(value.value)">
+            <option>{{placeholder}}</option>
+            <option *ngFor="let option of options">{{option}}</option>
+        </select>
+    </div>
+</div>
